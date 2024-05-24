@@ -1,0 +1,1479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Town</title>
+    <link rel="shortcut icon" href="./house.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <style>
+        
+        body {
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .firstdiv {
+            width: 100%;
+            height: 100vh;
+            border: 2px solid;
+            background-image: url('./the-town-bg-01.jpg');
+        
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            position: relative;
+            
+        }
+        .navbar {
+            width: 100%;
+            height: 9vh;
+            position: fixed;
+            top: 0;
+            z-index: 99;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.4s ease-in-out;
+        }
+        .navbar .div11 {
+            margin-left: 5%;
+            font-size: 2em;
+        }
+        .navbar .list1 {
+            position: absolute;
+            left: 50%;
+            top: 35%;
+            /* background-color: pink; */
+            width: 100%;
+        }
+        .navbar .list1 ul {
+            display: flex;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .navbar .list1 li {
+            margin-left: 5vw;
+        }
+        .navbar .list1 a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.4em;
+            transition: color 0.4s ease-in-out;
+        }
+        .navbar .div11 a {
+            text-decoration: none;
+            color: white;
+            font-size: 1em;
+            transition: color 0.4s ease-in-out;
+        }
+        .navbar .div11 a:hover{
+            color: rgba(29, 29, 250, 0.767);
+        }
+        /* .navbar .list1 a:link{
+            color: white;
+        }
+        .navbar .list1 a:visited{
+            color:red;
+        } */
+        .navbar .list1 a:hover{
+            color: rgba(29, 29, 250, 0.767);
+        } 
+        .navbar .list1 a:active{
+            color:gray;
+         }
+        .navbar.scrolled {
+            background-color: white;
+            
+            opacity: 0.98;
+        }
+        .inputdiv1{
+            display: none;
+            visibility: hidden;
+            
+        }
+        .navbar.scrolled .list1 a, 
+        .navbar.scrolled .div11 a {
+            color:gray;
+        }
+        
+        .div12{
+            /* background-color: pink; */
+            width: 30%;
+            height: 45%;
+            position: absolute;
+            top: 20%;
+            left: 38%;
+        }
+        .div12 .p1{
+            font-size: 3.5em;
+            color: white;
+            text-shadow: 1px 3px black;
+            padding:5px 15px;
+            
+        }
+        .div12 .p2{
+            margin-top: -40px;
+            padding: 1px 22px;
+            font-size: 1.3em;
+            color: white;
+        }
+        .div12 .p3{
+            padding: 1px 60px;
+            font-size: 1.3em;
+            color: white;
+            
+        }
+        .firstdiv .div13 {
+            border-radius: 55px;
+            width: 85px;
+            height: 85px;
+            background-color: white;
+            position: absolute;
+            top: 70vh;
+            left: 45%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.4s ease-in-out;
+        }
+        .div13 .h {
+            font-size: 120px;
+            color: rgb(235, 69, 69);
+            transition: color 0.4s ease-in-out;
+        }
+        .firstdiv .div13:hover {
+            background-color: rgb(41, 41, 248);
+        }
+        .div13 .h:hover {
+            color: white;
+        }
+       .secdiv{
+        width: 100%;
+        height: 500px;
+        padding: 40px 3px 3px 40px;
+        box-sizing: border-box;
+        /* background-color: pink; */
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        column-gap: 6%;
+        
+       }
+       .secdiv .div21{
+        width: 45%;
+        height: 85%;
+        /* border: 2px solid; */
+        /* background-color: orange; */
+        align-self: center;
+       }
+       .secdiv .div22{
+        width: 41%;
+        height: 85%;
+         /* border: 2px solid; 
+         background-color:green;  */
+        align-self: center;
+        justify-content: flex-start;
+        align-content: flex-start;
+        
+        display: flex;
+        flex-direction: column;
+        
+       }
+       .secdiv .div21 img{
+        width: 100%;
+        height: 100%;
+       }
+       .div22 .p4{
+        color: rgba(29, 29, 250, 0.767);
+        font-size: 2.4em;
+    
+        align-self: flex-start;
+
+       }
+       .div22 .p5{
+        
+        font-size: 1.3em;
+        word-spacing: 2px;
+        opacity: 0.6;
+        line-height: 1.2;
+        align-self: flex-start;
+       }
+       .div22 .p6{
+        
+        font-size: 1.3em;
+        word-spacing: 2px;
+        line-height: 1.2;
+        align-self: flex-start;
+        opacity: 0.6;
+       }
+       .div22 .b1{
+        
+        border-radius: 35px;
+        width: 150px;
+        height: 55px;
+        font-size: 1.2em;
+        color: white;
+        background-color:  rgb(29, 29, 250,0.767);
+        align-self: flex-start;
+       }
+       .div22 .b1:hover{
+        background-color:  rgb(29, 29, 250,0.4);
+       }
+       .thirddiv{
+        width: 100%;
+        height:100%;
+        padding: 5% 2% 5% 2%;
+        /* border: 2px solid;
+        background-color: pink; */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+       }
+       .thirddiv .div31{
+        width: 30%;
+        height: 70%;
+        /* border: 2px solid; */
+        display: flex;
+        flex-direction: column;
+        
+
+       }
+       .thirddiv .div32{
+        width: 30%;
+        height: 70%;
+        /* border: 2px solid; */
+        display: flex;
+        flex-direction: column;
+        
+
+        
+       }
+       .thirddiv .div33{
+        width: 30%;
+        height: 70%;
+        /* border: 2px solid; */
+        display: flex;
+        flex-direction: column;
+        
+
+        
+       }
+       .div31 .icon2{
+        font-size: 120px;
+        color: rgba(29, 29, 250, 0.767);
+        align-self: center;
+       }
+       .div32 .icon3{
+        font-size: 120px;
+        color:rgba(29, 29, 250, 0.767);
+        align-self: center;
+       }
+       .div33 .icon3{
+        font-size: 120px;
+        color: rgba(29, 29, 250, 0.767);
+        align-self: center;
+       }
+       .div31 .p31{
+        font-size: 1.7em;
+        color: rgba(29, 29, 250, 0.767);
+        align-self: center;
+       }
+       .div32 .p32{
+        font-size: 1.7em;
+        color: rgba(29, 29, 250, 0.767);
+        align-self: center;
+       }
+       .div33 .p33{
+        font-size: 1.7em;
+        color: rgba(29, 29, 250, 0.767);
+        align-self: center;
+       }
+       .div31 .p312{
+        font-size: 1.2em;
+        align-self: flex-start;
+        line-height: 1.8;
+        opacity: 0.7;
+        
+       }
+       .div32 .p322{
+        font-size: 1.15em;
+        align-self: flex-start;
+        line-height: 1.8;
+        opacity: 0.7;
+       
+       }
+       .div33 .p332{
+        font-size: 1.2em;
+        align-self: flex-start;
+        line-height: 1.8;
+        opacity: 0.7;
+        
+       }
+       .fourthdiv{
+        width: 100%;
+        height: 100%;
+        /* background-color: pink; */
+       }
+       .fourthdiv h1{
+        text-align: center;
+        
+        font-size: 3em;
+        color: rgba(29, 29, 250, 0.767);
+        font-weight: 100;
+       }
+       .fourthdiv .p41{
+        opacity: 0.7;
+        text-align: center;
+        font-size: 1.1em;
+        
+
+       }
+       .fourthdiv .p42{
+        opacity: 0.7;
+        text-align: center;
+        font-size: 1.1em;
+       }
+       .fivthdiv{
+        width: 100%;
+        height: 100%;
+        /* background-color: orange;
+        border: 2px solid; */
+        display: flex;
+        flex-direction: row;
+        padding: 25px 25px 25px 55px;
+        column-gap: 3%;
+        box-sizing: border-box;
+
+       }
+       .fivthdiv img{
+        width: 17%;
+        height: 15%;
+       }
+      
+       
+       .sixdiv{
+        width: 100%;
+        height: 100px;
+        /* border: 2px solid;
+        background-color: pink; */
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+        gap: 2%;
+       }
+       .sixdiv .icon4{
+        font-size: 30px;
+        color: aqua;
+       }
+       .sixdiv .icon5{
+        font-size: 30px;
+        color: #afb3b6;
+       }
+       .sixdiv .icon6{
+        font-size: 30px;
+        color: #afb3b6;
+       }
+       .icon5:hover{
+        color: rgba(29, 29, 250, 0.767);
+       }
+       .icon6:hover{
+        color: rgba(29, 29, 250, 0.767);
+       }
+
+       .sevendiv{
+        width: 100%;
+        height: 900px;
+        border: 2px solid;
+        background-image: url(./the-town-bg-02.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 900px;
+        object-fit: cover;
+        position: relative;
+
+    
+       }
+       .sevendiv .p71{
+        font-size: 3em;
+        color: white;
+        padding: 7% 5% 2% 12%;
+       
+        
+       }
+       .line1{
+        width: 70%;
+        height: 2px;
+        border: 0 none;
+        background-color: white;
+        margin-left: 12%;
+        position: absolute;
+        top:27%;
+        
+        
+       }
+       .line2{
+        width: 20%;
+        height: 10px;
+        border: 0 none;
+        background-color: white;
+        margin-left: 12%;
+        position: absolute;
+        top:27%;
+       }
+       .p72{
+        color: rgba(255, 255, 255, 0.76);
+        padding-left: 12%;
+        padding-right: 16%;
+        line-height: 1.8;
+       }
+       .div71{
+        width: 80%;
+        height: 50%;
+        /* border: 2px solid; */
+        /* background-color: pink; */
+        margin-left: 12%;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+        justify-content: space-around;
+       }
+       .div71 .div711{
+        /* width: 40%;
+        height: 40%; */
+         /* background-color: orange; */
+         display: flex;
+         flex-direction: row;
+         gap: 8%;
+       }
+       .div711 .icon7{
+        font-size: 4em;
+        color: white;
+       }
+      .div711 .icon7:hover{
+        color:  rgb(29, 29, 250,0.767);
+      }
+       .div711 .p711{
+        color: white;
+        font-size: 1.2em;
+       }
+       
+       .div722 .input1{
+        background-color: transparent;
+        width: 42%;
+        height: 15%;
+        margin-top: 3%;
+        
+       }
+       .input1::placeholder{
+        text-align: center;
+        color: white;
+       }
+       .div722 .b2{
+        width: 27%;
+        height: 17%;
+        background-color: white;
+        color: black;
+        margin-left: 5%;
+        border-style: none;
+       }
+       .div722 .b2:hover{
+        background-color:  rgb(29, 29, 250,0.767);
+       }
+       .sevendiv .lastp{
+        
+        color: white;
+        /* border: 2px solid; */
+        text-align: center;
+        
+
+        font-size: 0.9em;
+       }
+       
+       
+
+
+
+        /* for tablet screens */
+        @media screen and (min-width: 731px) and (max-width: 1050px) {
+            .inputdiv1{
+            display: none;
+            visibility: hidden;
+            
+        }
+        .navbar .list1 {
+            position: absolute;
+            left: 37%;
+            top: 37%;
+            /* background-color: pink; */
+            width: 100%;
+        }
+        .navbar .list1 ul {
+            display: flex;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .navbar .list1 li {
+            margin-left: 5vw;
+        }
+        .navbar .list1 a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.5em;
+            transition: color 0.4s ease-in-out;
+        }
+        .navbar .div11 a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2em;
+            transition: color 0.4s ease-in-out;
+        }
+            .firstdiv .div12{
+             /* background-color: pink; */
+             width: 50%;
+             height: 40%; 
+             left: 30%;   
+            }
+            .div12 .p1{
+                font-size: 4em;
+            }
+            .div12 .p2{
+                font-size: 1.5em;
+            }
+            .div13 .p3{
+                font-size: 1.5em;
+            }
+            .firstdiv .div13 {
+                top: 65vh;
+                left: 42vw;
+            }
+            .firstdiv{
+                width: 100%;
+            height: 100vh;
+            border: 2px solid;
+            background-image: url('./the-town-bg-01.jpg');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            position: relative;
+            }
+            .secdiv{
+        width: 100%;
+        height: 1000px;
+        margin-top: 30px;
+        padding: 10px 3px 3px 10px;
+        box-sizing: border-box;
+        /* background-color: pink; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 30px;
+        
+       }
+       .secdiv .div21{
+        width: 75%;
+        height: 75%;
+        border: 2px solid;
+        /* background-color: orange; */
+        align-self: center;
+       }
+       .secdiv .div22{
+        width: 75%;
+        height: 75%;
+        /* border: 2px solid;
+        background-color:green; */
+        align-self: center;
+        
+        display: flex;
+        flex-direction: column;
+        
+       }
+       .secdiv .div21 img{
+        width: 100%;
+        height: 100%;
+       }
+       .div22 .p4{
+        color: rgba(29, 29, 250, 0.767);
+        font-size: 3em;
+    
+        align-self: flex-start;
+
+       }
+       .div22 .p5{
+        
+        font-size: 1.7em;
+        word-spacing: 2px;
+        opacity: 0.6;
+        align-self: flex-start;
+       }
+       .div22 .p6{
+        
+        font-size: 1.7em;
+        word-spacing: 2px;
+        opacity: 0.6;
+        align-self: flex-start;
+       }
+       .div22 .b1{
+       
+        border-radius: 35px;
+        width: 150px;
+        height: 55px;
+        font-size: 1.5em;
+        color: white;
+        background-color:  rgb(29, 29, 250,0.767);
+        align-self: flex-start;
+       }
+       .thirddiv{
+        width: 100%;
+        height:100%;
+        padding: 5% 2% 5% 2%;
+        /* border: 2px solid;
+        background-color: pink; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+       }
+       .thirddiv .div31{
+        width: 75%;
+        height: 75%;
+        /* border: 2px solid; */
+        display: flex;
+        flex-direction: column;
+        
+
+       }
+       .thirddiv .div32{
+        width: 75%;
+        height: 75%;
+        /* border: 2px solid; */
+        display: flex;
+        flex-direction: column;
+        
+
+        
+       }
+       .thirddiv .div33{
+        width: 75%;
+        height: 75%;
+        /* border: 2px solid; */
+        display: flex;
+        flex-direction: column;
+        
+
+        
+       }
+       .div31 .icon2{
+        font-size: 150px;
+        color: rgba(29, 29, 250, 0.767);
+        align-self: center;
+       }
+       .div32 .icon3{
+        font-size: 150px;
+        color:rgba(29, 29, 250, 0.767);
+        align-self: center;
+       }
+       .div33 .icon3{
+        font-size: 150px;
+        color: rgba(29, 29, 250, 0.767);
+        align-self: center;
+       }
+       .div31 .p31{
+        font-size: 1.7em;
+        color: rgba(29, 29, 250, 0.767);
+        align-self: center;
+       }
+       .div32 .p32{
+        font-size: 1.7em;
+        color: rgba(29, 29, 250, 0.767);
+        align-self: center;
+       }
+       .div33 .p33{
+        font-size: 1.7em;
+        color: rgba(29, 29, 250, 0.767);
+        align-self: center;
+       }
+       .div31 .p312{
+        font-size: 1.2em;
+        align-self: flex-start;
+        line-height: 1.8;
+        opacity: 0.7;
+        
+       }
+       .div32 .p322{
+        font-size: 1.15em;
+        align-self: flex-start;
+        line-height: 1.8;
+        opacity: 0.7;
+       
+       }
+       .div33 .p332{
+        font-size: 1.2em;
+        align-self: flex-start;
+        line-height: 1.8;
+        opacity: 0.7;
+        
+       }
+       .fourthdiv{
+        width: 100%;
+        height: 100%;
+        /* background-color: pink; */
+       }
+       .fourthdiv h1{
+        text-align: center;
+        
+        font-size: 2.5em;
+        color: rgba(29, 29, 250, 0.767);
+        font-weight: 100;
+       }
+       .fourthdiv .p41{
+        opacity: 0.7;
+        text-align: center;
+        font-size: 1em;
+        
+
+       }
+       .fourthdiv .p42{
+        opacity: 0.7;
+        text-align: center;
+        font-size: 1em;
+       }
+       .fivthdiv{
+        width: 100%;
+        height: 100%;
+        /* background-color: orange;
+        border: 2px solid; */
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,1fr);
+        justify-content: center;
+        column-gap: 3%;
+        row-gap: 2%;
+        box-sizing: border-box;
+
+       }
+       .fivthdiv img{
+        width: 100%;
+        height: 100%;
+       }
+       
+       
+       .sixdiv{
+        width: 100%;
+        height: 100px;
+        /* border: 2px solid;
+        background-color: pink; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2%;
+       }
+       .sevendiv{
+        width: 100%;
+        height: 900px;
+        border: 2px solid;
+        background-image: url(./the-town-bg-02.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 900px;
+        object-fit: cover;
+        position: relative;
+
+    
+       }
+       .sevendiv .p71{
+        font-size: 3em;
+        color: white;
+        padding: 7% 5% 2% 12%;
+       
+        
+       }
+       .line1{
+        width: 70%;
+        height: 2px;
+        border: 0 none;
+        background-color: white;
+        margin-left: 12%;
+        position: absolute;
+        top:21%;
+        
+        
+       }
+       .line2{
+        width: 20%;
+        height: 10px;
+        border: 0 none;
+        background-color: white;
+        margin-left: 12%;
+        position: absolute;
+        top:21%;
+       }
+       .p72{
+        color: rgba(255, 255, 255, 0.76);
+        padding-left: 12%;
+        padding-right: 16%;
+        line-height: 1.8;
+       }
+       .div71{
+        width: 80%;
+        height: 50%;
+        /* border: 2px solid; */
+        /* background-color: pink; */
+        margin-left: 12%;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+        justify-content: space-around;
+       }
+       .div71 .div711{
+        /* width: 40%;
+        height: 40%; */
+         /* background-color: orange; */
+         display: flex;
+         flex-direction: row;
+         gap: 8%;
+       }
+       .div711 .icon7{
+        font-size: 4em;
+        color: white;
+       }
+       .div711 .p711{
+        color: white;
+        font-size: 1.2em;
+       }
+       .div722 .input1{
+        background-color: transparent;
+        width: 42%;
+        height: 15%;
+        margin-top: 3%;
+       }
+       .input1::placeholder{
+        text-align: center;
+        color: white;
+       }
+       .div722 .b2{
+        width: 27%;
+        height: 17%;
+        background-color: white;
+        color: black;
+        margin-left: 5%;
+       }
+       .sevendiv .lastp{
+        
+        color: white;
+        /* border: 2px solid; */
+        text-align: center;
+        
+
+        font-size: 0.9em;
+       }
+
+
+
+
+
+
+        }
+        /* for phone device */
+        @media screen and (min-width:250px) and (max-width:730px) {
+
+          
+         .list1{
+            width: 200px;
+            height: 300px;
+            border: 2px solid;
+            background-color: white;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            transition: 0.5s ease;
+            transform: translateY(-350px);
+         }
+         .navbar .list1 {
+            margin-right: 1%;
+        }
+        .navbar .list1 ul {
+            
+            display: flex;
+            flex-direction: column;
+            margin-top: 15%;
+            padding: 0;
+            list-style: none;
+        }
+      
+        
+        .navbar .list1 li {
+            
+            margin-left: 5vw;
+            
+        }
+        
+        .navbar .list1 a {
+            line-height: 1.8;
+            text-decoration: none;
+            color: black;
+            font-size: 1.5em;
+            transition: color 0.4s ease-in-out;
+            cursor: pointer;
+        }
+        .navbar .list1 a:hover{
+            
+            padding: 10px;
+            background-color: black;
+            color: white;
+        }
+        .inputdiv1{
+            display: none;
+            visibility: hidden;
+            
+        }
+        .toggle{
+            position: absolute;
+            height: 30px;
+            width: 30px;
+            background-color:transparent;
+            z-index: 1;
+            cursor: pointer;
+            border-radius: 5px;
+            top: 35%;
+            right: 10%;
+            
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+        .toggle .common{
+            position: absolute;
+            height: 2px;
+            width: 20px;
+            background-color:black;
+            border-radius: 50px;
+            transition: 0.3s ease;
+        }
+        .toggle .top-line{
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .toggle .mid-line{
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .toggle .end-line{
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .inputdiv1:checked ~ .toggle .top-line{
+            left: 2px;
+            top: 14px;
+            width: 25px;
+            transform: rotate(45deg);
+        }
+        .inputdiv1:checked ~ .toggle .mid-line{
+            opacity: 0;
+            transform: translatex(100px)
+        }
+        .inputdiv1:checked ~ .toggle .end-line{
+            left: 2px;
+            top: 14px;
+            width: 25px;
+            transform: rotate(-45deg);
+        }
+        .inputdiv1:checked ~ .list1{
+            transform: translateY(0);
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+        }
+        .navbar .div11 a {
+            text-decoration: none;
+            color: white;
+            font-size:1em;
+            transition: color 0.4s ease-in-out;
+        }
+
+        
+
+
+
+
+            .firstdiv .div12{
+             /* background-color: pink; */
+             width: 80%;
+             height: 80%; 
+             left: 20%;   
+             top:20%;
+            }
+            .div12 .p1{
+                font-size: 3em;
+            }
+            .div12 .p2{
+                font-size: 1.1em;
+            }
+            .div13 .p3{
+                font-size: 1.1em;
+            }
+            .firstdiv .div13 {
+                top: 65vh;
+                left: 35vw;
+            }
+            .firstdiv{
+                width: 100%;
+            height: 100vh;
+            border: 2px solid;
+            background-image: url('./the-town-bg-01.jpg');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            position: relative;
+            }
+            .secdiv{
+        width: 100%;
+        height: 1000px;
+        padding: 10px 5px 0px 10px;
+        box-sizing: border-box;
+        /* background-color: pink; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 30px;
+        
+       }
+       .secdiv .div21{
+        width: 95%;
+        height: 95%;
+        border: 2px solid;
+        /* background-color: orange; */
+        align-self: center;
+       }
+       .secdiv .div22{
+        width: 95%;
+        height: 95%;
+        /* border: 2px solid;
+        background-color:green; */
+        align-self: center;
+        /* position: relative; */
+        display: flex;
+        flex-direction: column;
+        
+       }
+       .secdiv .div21 img{
+        width: 100%;
+        height: 100%;
+       }
+       .div22 .p4{
+        color: rgba(29, 29, 250, 0.767);
+        font-size: 3em;
+        /* position: absolute; */
+        /* top: -8%; */
+        align-self: flex-start;
+
+       }
+       .div22 .p5{
+        /* position: absolute; */
+        /* top: 23%; */
+        font-size: 1.5em;
+        word-spacing: 2px;
+        opacity: 0.6;
+        align-self: flex-start;
+       }
+       .div22 .p6{
+        /* position: absolute; */
+        /* top: 55%; */
+        font-size: 1.5em;
+        word-spacing: 2px;
+        opacity: 0.6;
+        align-self: flex-start;
+       }
+       .div22 .b1{
+        /* position: absolute; */
+        /* top: 95%; */
+        border-radius: 35px;
+        width: 150px;
+        height: 55px;
+        font-size: 1.5em;
+        color: white;
+        background-color:  rgb(29, 29, 250,0.767);
+        align-self: flex-start;
+       }
+       .thirddiv{
+        width: 100%;
+        height:100%;
+        padding: 5% 2% 5% 2%;
+        /* border: 2px solid;
+        background-color: pink; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+       }
+       .thirddiv .div31{
+        width: 85%;
+        height: 85%;
+        /* border: 2px solid; */
+        display: flex;
+        flex-direction: column;
+        
+
+       }
+       .thirddiv .div32{
+        width: 85%;
+        height: 85%;
+        /* border: 2px solid; */
+        display: flex;
+        flex-direction: column;
+        
+
+        
+       }
+       .thirddiv .div33{
+        width: 85%;
+        height: 85%;
+        /* border: 2px solid; */
+        display: flex;
+        flex-direction: column;
+        
+
+        
+       }
+       .div31 .icon2{
+        font-size: 150px;
+        color: rgba(29, 29, 250, 0.767);
+        align-self: center;
+       }
+       .div32 .icon3{
+        font-size: 150px;
+        color:rgba(29, 29, 250, 0.767);
+        align-self: center;
+       }
+       .div33 .icon3{
+        font-size: 150px;
+        color: rgba(29, 29, 250, 0.767);
+        align-self: center;
+       }
+       .div31 .p31{
+        font-size: 1.7em;
+        color: rgba(29, 29, 250, 0.767);
+        align-self: center;
+       }
+       .div32 .p32{
+        font-size: 1.7em;
+        color: rgba(29, 29, 250, 0.767);
+        align-self: center;
+       }
+       .div33 .p33{
+        font-size: 1.7em;
+        color: rgba(29, 29, 250, 0.767);
+        align-self: center;
+       }
+       .div31 .p312{
+        font-size: 1.2em;
+        align-self: flex-start;
+        line-height: 1.8;
+        opacity: 0.7;
+        
+       }
+       .div32 .p322{
+        font-size: 1.15em;
+        align-self: flex-start;
+        line-height: 1.8;
+        opacity: 0.7;
+       
+       }
+       .div33 .p332{
+        font-size: 1.2em;
+        align-self: flex-start;
+        line-height: 1.8;
+        opacity: 0.7;
+        
+       }
+       .fourthdiv{
+        width: 100%;
+        height: 100%;
+        /* background-color: pink; */
+       }
+       .fourthdiv h1{
+        text-align: center;
+        
+        font-size: 2em;
+        color: rgba(29, 29, 250, 0.767);
+        font-weight: 100;
+       }
+       .fourthdiv .p41{
+        opacity: 0.7;
+        text-align: center;
+        font-size: 0.8em;
+        
+
+       }
+       .fourthdiv .p42{
+        opacity: 0.7;
+        text-align: center;
+        font-size: 0.8em;
+       }
+       .fivthdiv{
+        width: 100%;
+        height: 100%;
+        /* background-color: orange;
+        border: 2px solid; */
+        display: flex;
+        flex-direction: column;
+        /* padding: 25px 25px 25px 55px; */
+          row-gap: 20px;
+        box-sizing: border-box;
+
+       }
+       .fivthdiv img{
+        width: 100%;
+        height: 100%;
+       }
+       .sevendiv{
+        width: 100%;
+        height: 900px;
+        border: 2px solid;
+        background-image: url(./the-town-bg-02.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 900px;
+        object-fit: cover;
+        position: relative;
+
+    
+       }
+       .sevendiv .p71{
+        font-size: 3em;
+        color: white;
+        padding: 7% 5% 2% 12%;
+       
+        
+       }
+       .line1{
+        width: 70%;
+        height: 2px;
+        border: 0 none;
+        background-color: white;
+        margin-left: 12%;
+        position: absolute;
+        top:17%;
+        
+        
+       }
+       .line2{
+        width: 20%;
+        height: 10px;
+        border: 0 none;
+        background-color: white;
+        margin-left: 12%;
+        position: absolute;
+        top:17%;
+       }
+       .p72{
+        color: rgba(255, 255, 255, 0.76);
+        padding-left: 12%;
+        padding-right: 16%;
+        line-height: 1.8;
+       }
+       .div71{
+        width: 80%;
+        height: 50%;
+        /* border: 2px solid; */
+        /* background-color: pink; */
+        margin-left: 12%;
+        display: flex;
+        flex-direction: column;
+        /* grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr); */
+        justify-content: space-around;
+       }
+       .div71 .div711{
+        /* width: 40%;
+        height: 40%; */
+         /* background-color: orange; */
+         display: flex;
+         flex-direction: row;
+         gap: 8%;
+       }
+       .div711 .icon7{
+        font-size: 4em;
+        color: white;
+       }
+       .div711 .p711{
+        color: white;
+        font-size: 1.2em;
+       }
+       .div722 .input1{
+        background-color: transparent;
+        width: 70%;
+        height: 50%;
+        margin-top: 3%;
+       }
+       .input1::placeholder{
+        text-align: center;
+        color: white;
+       }
+       .div722 .b2{
+        width: 40%;
+        height: 49%;
+        background-color: white;
+        color: black;
+        margin-left: 5%;
+        margin-top: 3%;
+       }
+       .sevendiv .lastp{
+        
+        color: white;
+        /* border: 2px solid; */
+        text-align: center;
+        
+
+        font-size: 0.9em;
+       }
+      
+
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="firstdiv" id="main">
+        <div class="navbar" id="navbar">
+            <div class="div11"><a href="#main">The Town</a></div>
+            <label>
+            <input class="inputdiv1" type="checkbox">
+            <div class="toggle">
+                <span class="top-line common"></span>
+                <span class="mid-line common"></span>
+                <span class="end-line common"></span>
+
+            </div>
+            <div class="list1">
+                <ul>
+                    <li><a href="#intro">Introduction</a></li>
+                    <li><a href="#work">Our Work</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+            </label>
+        </div>
+        <div class="div12">
+            <p class="p1">The Town</p>
+            <p class="p2">Parallax Bootstrap Theme</p>
+            <p class="p3">by TemplateMo</p>
+        </div>
+        
+       <div class="div13">
+        <span class="material-symbols-outlined h">
+            arrow_drop_down
+        </span>
+       </div>
+    </div>
+    <br>
+    <div class="secdiv" id="intro">
+         <div class="div21">
+          <img src="./the-town-01.jpg">
+         </div>
+         <div class="div22">
+             <p class="p4">Introduction</p>
+             <p class="p5">The Town is simple CSS template built on Bootstrap v4.1.3 and this is a little parallax layout that you can use for your websites.</p>
+             <p class="p6">Please tell your friends about our site <span class="sp1">templatemo</span>. Thank you. Curabitur dapibus tristique enim a imperdiet. Etiam tristique sem sed condimentum posuere.</p>
+             <button class="b1">Read More</button>
+         </div>
+    </div>
+    <br>
+    <br>
+    <div class="thirddiv">
+       <div class="div31">
+        <span class="material-symbols-outlined icon2">
+            directions_bus
+            </span>
+            <p class="p31">Curabitur at elit eu risus</p>
+            <p class="p312">Sed ultrices sit amet mi eu malesuada. Cras ultricies gravida nisi, ac pellentesque nunc tincidunt quis. Aenean at ornare lacus. Duis imperdiet lacus justo.</p>
+       </div>
+       <div class="div32">
+        <span class="material-symbols-outlined icon3">
+            pedal_bike
+            </span>
+            <p class="p32">Nunc sed metus vel nisi</p>
+            <p class="p322">Praesent ut finibus leo. Duis et tempus ipsum, id pretium nunc. Vivamus imperdiet sem quis orci pharetra convallis. Nunc a tempus nisi, sed fringilla purus. In hac habitasse platea.</p>
+       </div>
+       <div class="div33">
+        <span class="material-symbols-outlined icon3">
+            source_environment
+            </span>
+            <p class="p33">
+                Fusce sed nisi sagittis
+            </p>
+            <p class="p332">Donec vestibulum libero nisl. Curabitur ac orci ac lorem blandit volutpat. Sed ac sodales nibh, ut porttitor elit. Sed id dui mi. Vestibulum ante ipsum primis in faucibus.</p>
+       </div>
+    </div>
+    <br>
+    <br>
+    <div class="fourthdiv" id="work">
+        <h1>Our Work</h1>
+         <p class="p41">"Curabitur ac orci ac lorem blandit volutpat. Sed ac sodales nibh, ut porttitor elit. Sed id dui</p>
+     <p class="p42"> mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia."</p>
+        </div>
+        <br>
+        <br>
+        <div class="fivthdiv">
+            <img src="./gallery-img-01.jpg">
+           <img src="gallery-tn-02.jpg">
+            <img src="./gallery-img-03.jpg">
+            <img src="./gallery-tn-04.jpg">
+            <img src="./gallery-img-05.jpg">
+            
+        </div>
+        <br>
+        <br>
+       
+      <div class="sixdiv">
+        <i class="fa-solid fa-circle icon4" style="color:rgba(29, 29, 250, 0.767);"></i>
+        <i class="fa-solid fa-circle icon5"></i>
+        <i class="fa-solid fa-circle icon6"></i>
+    </div>  
+    <br>
+    <br>
+    <div class="sevendiv" id="contact">
+        <p class="p71">contact us</p>
+        <hr class="line1">
+        <hr class="line2">
+        <p class="p72">Nullam tincidunt, lacus a suscipit luctus, elit turpis tincidunt dui, non tempus sem turpis vitae lorem. Maecenas eget odio in sapien ultrices viverra vitae vel leo. Curabitur at elit eu risus pharetra pellentesque at at velit.</p>
+        <div class="div71">
+                   <div class="div711">
+                
+                    <i class="fa-solid fa-phone-flip icon7"></i>
+                    <p class="p711">010-020-0340</p>
+                   </div>
+                   <div class="div711">
+                    <i class="fa-solid fa-envelope icon7"></i>
+                    <p class="p711">info@company.co</p>
+                </div>
+                <div class="div711">
+                    <i class="fa-solid fa-location-dot icon7"></i>
+                    <p class="p711">Location on Maps</p>
+                </div>
+                <div class="div722" >
+                    <input class="input1" type="text" placeholder="subscribe your email">
+                    <button class="b2">submit</button>
+                </div>
+                
+        </div>
+        <p class="lastp"> 
+            Copyright © 2019 Company Name - Design: Template Mo</p>
+    </div>
+</body>
+<script>
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+</script>
+</html>
